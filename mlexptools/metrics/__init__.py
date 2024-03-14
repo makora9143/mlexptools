@@ -1,7 +1,7 @@
 from .mean_metric import MeanMetric
 from .multiclass_agreement import MulticlassAgreement
 from .multiclass_calibrationerror import MulticlassCalibrationError
-from .metric_collection import AbstractMetricCollection
+from .metric_collection import AbstractMetricCollection, MetricCollection
 
 
 __all__ = [
@@ -9,4 +9,5 @@ __all__ = [
     "MulticlassAgreement",
     "MulticlassCalibrationError",
     "AbstractMetricCollection",
+    "MetricCollection"
 ]

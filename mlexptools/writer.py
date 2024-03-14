@@ -65,3 +65,7 @@ class MlflowWriter:
     def finish(self):
         _logger.info(f"Experiment {self.exp_name}/{self.run_name} finish.")
         mlflow.end_run()
+
+    def load_model_from_alias(self, model_name, alias):
+        return mlflow.pytorch.load_model(f'models:/{model_name}@{alias}', map_location='cpu')
+
